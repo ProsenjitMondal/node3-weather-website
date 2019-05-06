@@ -1,4 +1,3 @@
-
 console.log('Client side javascript file is loaded');
 
 var weatherForm = document.querySelector('form');
@@ -13,7 +12,7 @@ weatherForm.addEventListener('submit', function(event) {
     messageTwo.textContent = '';
 
     if (location) {
-        fetch('http://localhost:3000/weather?address=' + location).then(response => {
+        fetch('/weather?address=' + location).then(response => {
             response.json().then(data => {
                 if (data.error) {
                     search.focus();
