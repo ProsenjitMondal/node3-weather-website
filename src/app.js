@@ -51,7 +51,9 @@ app.get('/weather', (req, res) => {
                 message: `${forecast.summary} It is currently ${forecast.temperature} degrees out. There is a ${forecast.precipProbability}% chance of rain`,
                 forecast,
                 location,
-                address
+                address,
+                temperatureHigh: forecast.temperatureHigh,
+                temperatureLow: forecast.temperatureLow
             });
         });
     });
